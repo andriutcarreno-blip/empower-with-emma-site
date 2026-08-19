@@ -8,18 +8,6 @@ if (toggle && navLinks) {
     toggle.textContent = open ? 'Close' : 'Menu';
     document.body.style.overflow = open ? 'hidden' : '';
   });
-
-  // On mobile, tapping "Experiences" toggles its submenu instead of navigating away
-  const hasSub = document.querySelector('.has-sub');
-  if (hasSub) {
-    const trigger = hasSub.querySelector(':scope > a');
-    trigger.addEventListener('click', (e) => {
-      if (window.innerWidth <= 860) {
-        e.preventDefault();
-        hasSub.classList.toggle('open');
-      }
-    });
-  }
 }
 
 // Contact form — no backend wired up, just a friendly confirmation
