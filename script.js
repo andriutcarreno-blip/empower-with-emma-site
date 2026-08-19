@@ -5,6 +5,8 @@ if (toggle && navLinks) {
   toggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
+    toggle.textContent = open ? 'Close' : 'Menu';
+    document.body.style.overflow = open ? 'hidden' : '';
   });
 
   // On mobile, tapping "Experiences" toggles its submenu instead of navigating away
